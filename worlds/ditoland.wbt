@@ -1,4 +1,4 @@
-#VRML_SIM R2025a utf8
+#VRML_SIM R2023b utf8
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.2457337673317987 -0.4375589451697061 -0.8649607419385552 5.067888395586086
-  position -0.053721915211932286 -3.060170424506177 0.564354694526392
+  orientation 0.2502675160833658 -0.301269721092433 -0.9201101703308957 4.751177995291668
+  position 0.05103619341472876 -1.750882086970553 1.5997004303318672
 }
 TexturedBackground {
 }
@@ -18,9 +18,41 @@ RectangleArena {
   floorSize 5 5
 }
 Solid {
+  translation -0.38 -0.51 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(1)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
   translation 0.5 -0.5 0
   children [
     Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/HSPVCBla8AAt91v.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
       geometry Box {
         size 0.2 0.2 0.2
       }
@@ -32,9 +64,41 @@ Solid {
   }
 }
 Solid {
+  translation -0.38 0.17 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/HSPVCBla8AAt91v.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs2(1)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
   translation 0.68 -0.16 0
   children [
     Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/WhatsApp Image 2026-09-22 at 11.53.22 PM.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
       geometry Box {
         size 0.2 0.2 0.2
       }
@@ -46,9 +110,41 @@ Solid {
   }
 }
 Solid {
+  translation -0.61 -0.16 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/WhatsApp Image 2026-09-22 at 11.53.22 PM.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs4"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
   translation 0.21 -0.5 0
   children [
     Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
       geometry Box {
         size 0.2 0.2 0.2
       }
@@ -62,12 +158,12 @@ Solid {
 Robot {
   translation 0 0 -10
   name "toto"
-  controller "toto"
+  controller "<none>"
   supervisor TRUE
 }
 DEF foxbot Robot {
-  translation 0.3887630051469352 -2.3196600589374126 0.09942778450188153
-  rotation 0.003272953505633535 0.0025340559234410215 0.9999914331312679 -2.117254792658236
+  translation 0.317931 0.736641 0.160323
+  rotation -0.0009801444750169581 0.0002646461282580293 0.9999994846394846 -1.5749153071795865
   children [
     DistanceSensor {
       translation 0.158 0.04 0
@@ -605,7 +701,7 @@ DEF foxbot Robot {
     }
     DEF JOINT_RODA_KIRI HingeJoint {
       jointParameters HingeJointParameters {
-        position 3820.493579493241
+        position 3851.9677080300203
         axis 0 1 0
         anchor 0.055 0.125 -0.04
       }
@@ -617,7 +713,7 @@ DEF foxbot Robot {
       ]
       endPoint DEF RODA_KIRI Solid {
         translation 0.055 0.125 -0.04
-        rotation -0.9754034246584151 0.15586558177582935 0.15586558177582968 1.5956978775562007
+        rotation 0.9658166928933438 -0.1833004578943606 -0.18330045789436072 4.677614769246359
         children [
           DEF RODA_SHAPE Shape {
             appearance PBRAppearance {
@@ -638,13 +734,11 @@ DEF foxbot Robot {
           density -1
           mass 0.12
         }
-        linearVelocity -0.06234108467091546 1.6748263565820772e-05 1.0212988517703286e-06
-        angularVelocity 1.708749155957214 -1.0393224832570631 0.002387440090079349
       }
     }
     DEF JOINT_RODA_KANAN HingeJoint {
       jointParameters HingeJointParameters {
-        position 3820.4954138013545
+        position 3863.671418287873
         axis 0 1 0
         anchor 0.055 -0.125 -0.04
       }
@@ -656,7 +750,7 @@ DEF foxbot Robot {
       ]
       endPoint DEF RODA_KANAN Solid {
         translation 0.055 -0.125 -0.04
-        rotation -0.9751237231231483 0.15673819668869765 0.15673819668869732 1.5959845834552928
+        rotation 0.9433448242438222 0.23462794225368022 0.2346279422536792 4.6540986220404905
         children [
           USE RODA_SHAPE
         ]
@@ -666,18 +760,16 @@ DEF foxbot Robot {
           density -1
           mass 0.12
         }
-        linearVelocity -0.062376975127412325 -4.223522527357911e-05 4.718844050326158e-07
-        angularVelocity 1.708750874811496 -1.0393239281914948 0.0023885110362479684
       }
     }
     DEF JOINT_KASTOR BallJoint {
       jointParameters BallJointParameters {
-        position 160.12629861905276
+        position 243.0596016460128
         anchor -0.105 0 -0.07
       }
       endPoint DEF KASTOR Solid {
-        translation -0.10499664843903411 -1.4142347226631102e-07 -0.06997591475831226
-        rotation 0.3155587845338019 0.4607455147515424 -0.8295397664608286 -2.453462911586209
+        translation -0.1050237370854263 -4.177532372609471e-06 -0.06999676722605122
+        rotation -0.7233165584785742 -0.6306992698513554 0.2811255720130747 3.150746657693086
         children [
           DEF KASTOR_SHAPE Shape {
             appearance PBRAppearance {
@@ -697,8 +789,6 @@ DEF foxbot Robot {
           density -1
           mass 0.03
         }
-        linearVelocity -0.06242079240845112 1.0379322633251051e-05 -8.409976523183303e-07
-        angularVelocity -0.00034620566728370283 -2.0806929899946622 0.0006390029475112278
       }
     }
   ]
@@ -740,6 +830,4 @@ DEF foxbot Robot {
     mass 1
   }
   controller "foxbot_controller"
-  linearVelocity -0.06237220961017897 -5.11904238609403e-06 1.2118323475639208e-06
-  angularVelocity 5.855125293759615e-06 -6.185113216068291e-06 0.00027615580164844553
 }

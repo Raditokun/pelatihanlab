@@ -37,7 +37,7 @@ motor_kanan.setVelocity(0.0)
 
 jarak_nabrak = 0.15       
 jarak_aman_samping = 0.15 
-kecepatan_maju = 2.0     
+kecepatan_maju = 4.0     
 kecepatan_belok = 3.0    
 durasi_belok_90 = 1.23   
 belok_sampai = 0.0
