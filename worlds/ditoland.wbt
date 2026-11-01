@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.4377983196225036 -0.47636596250310376 -0.7625012138378561 4.489899074535509
-  position 0.15636417606570485 -1.6326175241601086 4.600333213417001
+  orientation 0.3502881567931013 -0.4216849542862095 -0.8363492132710646 4.673477922663278
+  position -0.6169670681715327 -2.9473357874696218 4.156193583638538
 }
 TexturedBackground {
 }
@@ -18,7 +18,53 @@ RectangleArena {
   floorSize 5 5
 }
 Solid {
-  translation -0.38 0.52 0
+  translation 0.17 2.07 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/WhatsApp Image 2026-09-22 at 11.53.22 PM.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.8 0.2
+      }
+    }
+  ]
+  name "obs3(4)"
+  boundingObject Box {
+    size 0.2 0.8 0.2
+  }
+}
+Solid {
+  translation -1.53 0.22 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1.5 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(8)"
+  boundingObject Box {
+    size 1.5 0.2 0.2
+  }
+}
+Solid {
+  translation 0.17 1.57 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -35,13 +81,13 @@ Solid {
       }
     }
   ]
-  name "obs1(5)"
+  name "obs1(7)"
   boundingObject Box {
     size 0.2 0.2 0.2
   }
 }
 Solid {
-  translation -0.17 1.17 0
+  translation -0.69 1.13 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -54,13 +100,105 @@ Solid {
         metalness 0
       }
       geometry Box {
+        size 0.2 1.6 0.2
+      }
+    }
+  ]
+  name "obs3(3)"
+  boundingObject Box {
+    size 0.2 1.6 0.2
+  }
+}
+Solid {
+  translation -1.32 1.75 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/HSPVCBla8AAt91v.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 1.8 0.2
+      }
+    }
+  ]
+  name "obs2(5)"
+  boundingObject Box {
+    size 0.2 1.8 0.2
+  }
+}
+Solid {
+  translation -0.28 -0.11 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
         size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(6)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation -1.53 0.22 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1.5 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(5)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation -2.18 1.13 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/WhatsApp Image 2026-09-22 at 11.53.22 PM.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 1.6 0.2
       }
     }
   ]
   name "obs3(2)"
   boundingObject Box {
-    size 0.2 0.2 0.2
+    size 0.2 1.6 0.2
   }
 }
 Solid {
@@ -110,7 +248,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.5 1.2 0
+  translation 0.03 1.01 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -123,13 +261,13 @@ Solid {
         metalness 0
       }
       geometry Box {
-        size 0.2 0.2 0.2
+        size 0.5 0.5 0.2
       }
     }
   ]
   name "obs2(2)"
   boundingObject Box {
-    size 0.2 0.2 0.2
+    size 0.5 0.5 0.2
   }
 }
 Solid {
@@ -156,7 +294,7 @@ Solid {
   }
 }
 Solid {
-  translation -0.38 0.86 0
+  translation -2.38 1.83 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -202,7 +340,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.23 1.5 0
+  translation 0.18 1.37 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -248,7 +386,7 @@ Solid {
   }
 }
 Solid {
-  translation -0.38 0.17 0
+  translation -0.4 0.64 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -346,8 +484,8 @@ Robot {
   supervisor TRUE
 }
 DEF foxbot Robot {
-  translation 0.317931 0.736641 0.160323
-  rotation -0.0009801444750169581 0.0002646461282580293 0.9999994846394846 -1.5749153071795865
+  translation 2.05191 1.22704 0.111861
+  rotation -0.002851521094344268 -0.007943553048541975 0.9999643837619485 0.971381
   children [
     DistanceSensor {
       translation 0.158 0.04 0
@@ -757,7 +895,7 @@ DEF foxbot Robot {
       children [
         Shape {
           appearance PBRAppearance {
-            baseColor 0.95 0.48 0.08
+            baseColor 0.61 0.09 0.08
             roughness 1
             metalness 0
           }
@@ -880,12 +1018,12 @@ DEF foxbot Robot {
         metalness 0
       }
       geometry Box {
-        size 0.3 0.2 0.08
+        size 0.2 0.2 0.08
       }
     }
     DEF JOINT_RODA_KIRI HingeJoint {
       jointParameters HingeJointParameters {
-        position 3851.9677080300203
+        position 3965.8500025367885
         axis 0 1 0
         anchor 0.055 0.125 -0.04
       }
@@ -897,7 +1035,7 @@ DEF foxbot Robot {
       ]
       endPoint DEF RODA_KIRI Solid {
         translation 0.055 0.125 -0.04
-        rotation 0.9658166928933438 -0.18330045789436056 -0.18330045789436056 4.67761476924636
+        rotation 0.7335058708759457 -0.4806085399732932 -0.4806085399732926 4.407314703669426
         children [
           DEF RODA_SHAPE Shape {
             appearance PBRAppearance {
@@ -922,7 +1060,7 @@ DEF foxbot Robot {
     }
     DEF JOINT_RODA_KANAN HingeJoint {
       jointParameters HingeJointParameters {
-        position 3863.671418287873
+        position 3985.099080362831
         axis 0 1 0
         anchor 0.055 -0.125 -0.04
       }
@@ -934,7 +1072,7 @@ DEF foxbot Robot {
       ]
       endPoint DEF RODA_KANAN Solid {
         translation 0.055 -0.125 -0.04
-        rotation 0.9433448242438223 0.23462794225368022 0.23462794225367897 4.6540986220404905
+        rotation -0.581661396446585 0.5751825883507823 0.57518258835078 2.087940483266917
         children [
           USE RODA_SHAPE
         ]
@@ -948,12 +1086,12 @@ DEF foxbot Robot {
     }
     DEF JOINT_KASTOR BallJoint {
       jointParameters BallJointParameters {
-        position 243.0596016460128
+        position 191.66416975084718
         anchor -0.105 0 -0.07
       }
       endPoint DEF KASTOR Solid {
-        translation -0.1050237370854263 -4.1775323726073475e-06 -0.06999676722605122
-        rotation -0.7233165584785742 -0.6306992698513553 0.28112557201307475 3.1507466576930856
+        translation -0.1050078526082053 3.3981316852068317e-06 -0.07002276271236228
+        rotation 0.9648131527764123 -0.17674994029499985 -0.194666481026789 1.9782996856659196
         children [
           DEF KASTOR_SHAPE Shape {
             appearance PBRAppearance {

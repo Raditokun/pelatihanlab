@@ -35,7 +35,7 @@ motor_kanan.setPosition(float('inf'))
 motor_kiri.setVelocity(0.0)
 motor_kanan.setVelocity(0.0)
 
-jarak_nabrak = 0.15       
+jarak_nabrak = 0.15      
 jarak_aman_samping = 0.15 
 kecepatan_maju = 4.0     
 kecepatan_belok = 3.0    
@@ -63,7 +63,7 @@ while robot.step(timestep) != -1:
 
  
     depan = min(
-        kanan_ujung,
+        
         depan_kanan1,
         depan_kanan2,
         depan_kanan3,
@@ -73,7 +73,7 @@ while robot.step(timestep) != -1:
         depan_kiri3,
         depan_kiri2,
         depan_kiri1,
-        kiri_ujung
+        
     )
     
 
@@ -89,16 +89,14 @@ while robot.step(timestep) != -1:
     jarak_darurat_samping = 0.08
 
    
-    # Kalau kanan terlalu mepet, belok kiri
+    
     if depan >= jarak_nabrak and kanan < jarak_darurat and kanan < kiri:
-        print("KANAN MEPET!")
         motor_kiri.setVelocity(-2.0)
         motor_kanan.setVelocity(6.0)
         continue
 
-   # Kalau kiri terlalu mepet, belok kanan
+   
     elif depan >= jarak_nabrak and kiri < jarak_darurat:
-        print("KIRI MEPET!")
         motor_kiri.setVelocity(6.0)
         motor_kanan.setVelocity(-2.0)
         continue
