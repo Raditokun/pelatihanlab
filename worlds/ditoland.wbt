@@ -1,0 +1,745 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.2457337673317987 -0.4375589451697061 -0.8649607419385552 5.067888395586086
+  position -0.053721915211932286 -3.060170424506177 0.564354694526392
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+}
+Solid {
+  translation 0.5 -0.5 0
+  children [
+    Shape {
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs2"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.68 -0.16 0
+  children [
+    Shape {
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs3"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.21 -0.5 0
+  children [
+    Shape {
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Robot {
+  translation 0 0 -10
+  name "toto"
+  controller "toto"
+  supervisor TRUE
+}
+DEF foxbot Robot {
+  translation 0.3887630051469352 -2.3196600589374126 0.09942778450188153
+  rotation 0.003272953505633535 0.0025340559234410215 0.9999914331312679 -2.117254792658236
+  children [
+    DistanceSensor {
+      translation 0.158 0.04 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kiri2"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 0.06 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kiri3"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.14934 0.0949997 0
+      rotation 0 0 1 0.523599
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kiriujung"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 0.08 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kiri4"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 -0.02 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kanan1"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 -0.06 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kanan3"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 -0.08 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kanan4"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.14934 -0.0949997 0
+      rotation 0 0 1 -0.523595307179586
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kananujung"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 -0.04 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kanan2"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 0.02 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan_kiri1"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.13 -0.108 0
+      rotation 0 0 1 -1.5707963267948966
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_kanan"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.13 0.108 0
+      rotation 0 0 1 1.5707963267948966
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_kiri"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DistanceSensor {
+      translation 0.158 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.48 0.08
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.012 0.025 0.018
+          }
+        }
+        Pose {
+          translation 0.0075 0 0
+          rotation 0 1 0 1.5707963267948966
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.12 0.15
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.003
+                radius 0.005
+                subdivision 20
+              }
+            }
+          ]
+        }
+      ]
+      name "sensor_depan"
+      lookupTable [
+        0 0 0
+        0.2 0.2 0
+      ]
+      type "sonar"
+      resolution 0.001
+    }
+    DEF BODY_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.05 0.35 0.75
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.2 0.08
+      }
+    }
+    DEF JOINT_RODA_KIRI HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3820.493579493241
+        axis 0 1 0
+        anchor 0.055 0.125 -0.04
+      }
+      device [
+        RotationalMotor {
+          name "motor_kiri"
+          maxTorque 2
+        }
+      ]
+      endPoint DEF RODA_KIRI Solid {
+        translation 0.055 0.125 -0.04
+        rotation -0.9754034246584151 0.15586558177582935 0.15586558177582968 1.5956978775562007
+        children [
+          DEF RODA_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0.08 0.09 0.11
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.035
+              radius 0.06
+              subdivision 48
+            }
+          }
+        ]
+        name "roda_kiri"
+        boundingObject USE RODA_SHAPE
+        physics Physics {
+          density -1
+          mass 0.12
+        }
+        linearVelocity -0.06234108467091546 1.6748263565820772e-05 1.0212988517703286e-06
+        angularVelocity 1.708749155957214 -1.0393224832570631 0.002387440090079349
+      }
+    }
+    DEF JOINT_RODA_KANAN HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3820.4954138013545
+        axis 0 1 0
+        anchor 0.055 -0.125 -0.04
+      }
+      device [
+        RotationalMotor {
+          name "motor_kanan"
+          maxTorque 2
+        }
+      ]
+      endPoint DEF RODA_KANAN Solid {
+        translation 0.055 -0.125 -0.04
+        rotation -0.9751237231231483 0.15673819668869765 0.15673819668869732 1.5959845834552928
+        children [
+          USE RODA_SHAPE
+        ]
+        name "roda_kanan"
+        boundingObject USE RODA_SHAPE
+        physics Physics {
+          density -1
+          mass 0.12
+        }
+        linearVelocity -0.062376975127412325 -4.223522527357911e-05 4.718844050326158e-07
+        angularVelocity 1.708750874811496 -1.0393239281914948 0.0023885110362479684
+      }
+    }
+    DEF JOINT_KASTOR BallJoint {
+      jointParameters BallJointParameters {
+        position 160.12629861905276
+        anchor -0.105 0 -0.07
+      }
+      endPoint DEF KASTOR Solid {
+        translation -0.10499664843903411 -1.4142347226631102e-07 -0.06997591475831226
+        rotation 0.3155587845338019 0.4607455147515424 -0.8295397664608286 -2.453462911586209
+        children [
+          DEF KASTOR_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0.55 0.58 0.64
+              roughness 1
+              metalness 0
+            }
+            geometry Sphere {
+              radius 0.03
+              subdivision 3
+            }
+          }
+        ]
+        name "kastor_belakang"
+        boundingObject USE KASTOR_SHAPE
+        physics Physics {
+          density -1
+          mass 0.03
+        }
+        linearVelocity -0.06242079240845112 1.0379322633251051e-05 -8.409976523183303e-07
+        angularVelocity -0.00034620566728370283 -2.0806929899946622 0.0006390029475112278
+      }
+    }
+  ]
+  name "foxbot"
+  model "najibcluster"
+  boundingObject Group {
+    children [
+      USE BODY_SHAPE
+      Pose {
+        translation 0.13 -0.108 0
+        rotation 0 0 1 -1.5707963267948966
+        children [
+          Box {
+            size 0.012 0.025 0.018
+          }
+        ]
+      }
+      Pose {
+        translation 0.13 0.108 0
+        rotation 0 0 1 1.5707963267948966
+        children [
+          Box {
+            size 0.012 0.025 0.018
+          }
+        ]
+      }
+      Pose {
+        translation 0.158 0 0
+        children [
+          Box {
+            size 0.012 0.025 0.018
+          }
+        ]
+      }
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "foxbot_controller"
+  linearVelocity -0.06237220961017897 -5.11904238609403e-06 1.2118323475639208e-06
+  angularVelocity 5.855125293759615e-06 -6.185113216068291e-06 0.00027615580164844553
+}

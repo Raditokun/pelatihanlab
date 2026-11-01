@@ -1,0 +1,170 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.6162087610592181 -0.5773658131068768 0.5356635890643476 4.10347321914406
+  position 2.46941792609047 -0.14686245395758019 3.6518798586169976
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+}
+Robot {
+  translation 0 0 -10
+  name "toto"
+  controller "toto"
+  supervisor TRUE
+}
+DEF foxbot Robot {
+  translation 1.35444 -1.01523e-17 0.098219
+  rotation -8.369478296414094e-14 -1 3.613596026773128e-14 0.0014759330091068798
+  children [
+    DistanceSensor {
+      translation 0.15 -0.1 0
+      rotation 0 0 1 -0.523595307179586
+      name "sensor_kanan"
+      lookupTable [
+        0 0 0
+        0.2 2 0
+      ]
+      type "sonar"
+    }
+    DistanceSensor {
+      translation 0.15 0.1 0
+      rotation 0 0 1 0.523599
+      name "sensor_kiri"
+      lookupTable [
+        0 0 0
+        0.2 1000 0
+      ]
+      type "sonar"
+    }
+    DistanceSensor {
+      translation 0.15 0 0
+      name "sensor_depan"
+      lookupTable [
+        0 0 0
+        0.2 1000 0
+      ]
+      type "sonar"
+    }
+    DEF BODY_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.05 0.35 0.75
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.2 0.08
+      }
+    }
+    DEF JOINT_RODA_KIRI HingeJoint {
+      jointParameters HingeJointParameters {
+        position 37.85274107028467
+        axis 0 1 0
+        anchor 0.055 0.125 -0.04
+      }
+      device [
+        RotationalMotor {
+          name "motor_kiri"
+          maxTorque 2
+        }
+      ]
+      endPoint DEF RODA_KIRI Solid {
+        translation 0.055 0.125 -0.04
+        rotation -0.9941283490943891 0.07651413440294706 0.07651413440294702 1.5766852495811197
+        children [
+          DEF RODA_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0.08 0.09 0.11
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.035
+              radius 0.06
+              subdivision 48
+            }
+          }
+        ]
+        name "roda_kiri"
+        boundingObject USE RODA_SHAPE
+        physics Physics {
+          density -1
+          mass 0.12
+        }
+      }
+    }
+    DEF JOINT_RODA_KANAN HingeJoint {
+      jointParameters HingeJointParameters {
+        position 37.85274107028468
+        axis 0 1 0
+        anchor 0.055 -0.125 -0.04
+      }
+      device [
+        RotationalMotor {
+          name "motor_kanan"
+          maxTorque 2
+        }
+      ]
+      endPoint DEF RODA_KANAN Solid {
+        translation 0.055 -0.125 -0.04
+        rotation -0.9941283490943885 0.07651413440295039 0.07651413440295048 1.57668524958112
+        children [
+          USE RODA_SHAPE
+        ]
+        name "roda_kanan"
+        boundingObject USE RODA_SHAPE
+        physics Physics {
+          density -1
+          mass 0.12
+        }
+      }
+    }
+    DEF JOINT_KASTOR BallJoint {
+      jointParameters BallJointParameters {
+        position 6.283185307179585
+        anchor -0.105 0 -0.07
+      }
+      endPoint DEF KASTOR Solid {
+        translation -0.105 0 -0.07
+        rotation -1.8552074166503258e-14 1 -1.2358498888236446e-14 0.06229048431451623
+        children [
+          DEF KASTOR_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0.55 0.58 0.64
+              roughness 1
+              metalness 0
+            }
+            geometry Sphere {
+              radius 0.03
+              subdivision 3
+            }
+          }
+        ]
+        name "kastor_belakang"
+        boundingObject USE KASTOR_SHAPE
+        physics Physics {
+          density -1
+          mass 0.03
+        }
+      }
+    }
+  ]
+  name "foxbot"
+  model "najibcluster"
+  boundingObject USE BODY_SHAPE
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "foxbot_controller"
+}

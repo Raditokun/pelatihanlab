@@ -1,0 +1,175 @@
+{
+  "range_m": 0.2,
+  "unit": "m",
+  "directions": {
+    "sensor_depan": [
+      1,
+      0,
+      0
+    ],
+    "sensor_kiri": [
+      0,
+      1,
+      0
+    ],
+    "sensor_kanan": [
+      0,
+      -1,
+      0
+    ]
+  },
+  "tolerance_m": 0.003,
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "clear",
+      "expected_m": {
+        "sensor_kanan": 0.2,
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.2
+      },
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.2,
+        "sensor_kanan": 0.2
+      },
+      "passed": true
+    },
+    {
+      "case": "front_10cm",
+      "expected_m": {
+        "sensor_kanan": 0.2,
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.1
+      },
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.1,
+        "sensor_kanan": 0.2
+      },
+      "passed": true
+    },
+    {
+      "case": "left_10cm",
+      "expected_m": {
+        "sensor_kanan": 0.2,
+        "sensor_kiri": 0.1,
+        "sensor_depan": 0.2
+      },
+      "observed_m": {
+        "sensor_kiri": 0.1,
+        "sensor_depan": 0.2,
+        "sensor_kanan": 0.2
+      },
+      "passed": true
+    },
+    {
+      "case": "right_10cm",
+      "expected_m": {
+        "sensor_kanan": 0.1,
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.2
+      },
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.2,
+        "sensor_kanan": 0.1
+      },
+      "passed": true
+    },
+    {
+      "case": "all_10cm",
+      "expected_m": {
+        "sensor_kanan": 0.1,
+        "sensor_kiri": 0.1,
+        "sensor_depan": 0.1
+      },
+      "observed_m": {
+        "sensor_kiri": 0.1,
+        "sensor_depan": 0.1,
+        "sensor_kanan": 0.1
+      },
+      "passed": true
+    },
+    {
+      "case": "front_5cm",
+      "expected_m": {
+        "sensor_kanan": 0.2,
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.05
+      },
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.05,
+        "sensor_kanan": 0.2
+      },
+      "passed": true
+    },
+    {
+      "case": "front_19cm",
+      "expected_m": {
+        "sensor_kanan": 0.2,
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.19
+      },
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.19,
+        "sensor_kanan": 0.2
+      },
+      "passed": true
+    },
+    {
+      "case": "front_beyond_range",
+      "expected_m": {
+        "sensor_kanan": 0.2,
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.2
+      },
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.2,
+        "sensor_kanan": 0.2
+      },
+      "passed": true
+    },
+    {
+      "case": "front_wall_contact",
+      "expected_front_m": 0.0056508801448816315,
+      "observed_m": {
+        "sensor_kiri": 0.2,
+        "sensor_depan": 0.006,
+        "sensor_kanan": 0.2
+      },
+      "robot_position_m": [
+        0.07420450081641607,
+        -0.007267685938231999,
+        0.09940515641248693
+      ],
+      "passed": true
+    }
+  ],
+  "resolved_issues": [
+    {
+      "issue": "Sensor origin could enter the wall when only chassis collision was active.",
+      "fix": "Added three sensor housings to the robot collision Group.",
+      "initial_contact_attempt": [
+        {
+          "case": "front_wall_contact",
+          "expected_front_m": -0.008357942318843292,
+          "observed_m": {
+            "sensor_kiri": 0.2,
+            "sensor_depan": 0.012,
+            "sensor_kanan": 0.2
+          },
+          "robot_position_m": [
+            0.08813781212400691,
+            1.9248330940663184e-15,
+            0.09944886695515859
+          ],
+          "passed": false
+        }
+      ]
+    }
+  ]
+}
