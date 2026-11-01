@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.2502675160833658 -0.301269721092433 -0.9201101703308957 4.751177995291668
-  position 0.05103619341472876 -1.750882086970553 1.5997004303318672
+  orientation 0.4377983196225036 -0.47636596250310376 -0.7625012138378561 4.489899074535509
+  position 0.15636417606570485 -1.6326175241601086 4.600333213417001
 }
 TexturedBackground {
 }
@@ -16,6 +16,121 @@ TexturedBackgroundLight {
 }
 RectangleArena {
   floorSize 5 5
+}
+Solid {
+  translation -0.38 0.52 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(5)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation -0.17 1.17 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/WhatsApp Image 2026-09-22 at 11.53.22 PM.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs3(2)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.76 0.81 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/WhatsApp Image 2026-09-22 at 11.53.22 PM.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs3(1)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.72 1.12 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/HSPVCBla8AAt91v.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs2(3)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.5 1.2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/HSPVCBla8AAt91v.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs2(2)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
 }
 Solid {
   translation -0.38 -0.51 0
@@ -36,6 +151,75 @@ Solid {
     }
   ]
   name "obs1(1)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation -0.38 0.86 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(2)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.78 0.34 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(3)"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation 0.23 1.5 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../downloads/kemal.jpeg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "obs1(4)"
   boundingObject Box {
     size 0.2 0.2 0.2
   }
@@ -87,7 +271,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.68 -0.16 0
+  translation 0.68 -0.21 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -713,7 +897,7 @@ DEF foxbot Robot {
       ]
       endPoint DEF RODA_KIRI Solid {
         translation 0.055 0.125 -0.04
-        rotation 0.9658166928933438 -0.1833004578943606 -0.18330045789436072 4.677614769246359
+        rotation 0.9658166928933438 -0.18330045789436056 -0.18330045789436056 4.67761476924636
         children [
           DEF RODA_SHAPE Shape {
             appearance PBRAppearance {
@@ -750,7 +934,7 @@ DEF foxbot Robot {
       ]
       endPoint DEF RODA_KANAN Solid {
         translation 0.055 -0.125 -0.04
-        rotation 0.9433448242438222 0.23462794225368022 0.2346279422536792 4.6540986220404905
+        rotation 0.9433448242438223 0.23462794225368022 0.23462794225367897 4.6540986220404905
         children [
           USE RODA_SHAPE
         ]
@@ -768,8 +952,8 @@ DEF foxbot Robot {
         anchor -0.105 0 -0.07
       }
       endPoint DEF KASTOR Solid {
-        translation -0.1050237370854263 -4.177532372609471e-06 -0.06999676722605122
-        rotation -0.7233165584785742 -0.6306992698513554 0.2811255720130747 3.150746657693086
+        translation -0.1050237370854263 -4.1775323726073475e-06 -0.06999676722605122
+        rotation -0.7233165584785742 -0.6306992698513553 0.28112557201307475 3.1507466576930856
         children [
           DEF KASTOR_SHAPE Shape {
             appearance PBRAppearance {
